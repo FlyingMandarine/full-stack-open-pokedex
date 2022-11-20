@@ -6,7 +6,7 @@ describe('Pokedex', function() {
   })
 
   it('pokemon page can be navigated to', function() {
-    cy.visit('http://localhost:5000/pokemon/metapod')
-    cy.contains('shed skin')
+    cy.get('a[href*="/pokemon/ivysaur"]').click()
+    cy.contains('chlorophyll')
   })
 })
