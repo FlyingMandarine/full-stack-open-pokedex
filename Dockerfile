@@ -33,6 +33,6 @@ WORKDIR /app
 ENV NODE_ENV production
 ENV PATH /root/.volta/bin:$PATH
 
-chmod +x /app/*
+RUN chmod +x /app/*
 
 CMD [ "npm", "run", "start" ]
