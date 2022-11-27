@@ -12,7 +12,7 @@ curltest=$(curl http://localhost:8080/health)
 
 echo "comparison"
 
-if [ $curltest == "ok" ]; then
+if [ $curltest == "notworking" ]; then
   exit 0
 else
   exit 1
