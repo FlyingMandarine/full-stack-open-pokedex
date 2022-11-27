@@ -2,4 +2,10 @@
 
 echo "Hello from shell script"
 
-exit 1 # exit status 0 means that the script "succeeds"
+curltest=$(curl http://localhost:8080/health)
+
+if [ $curltest == "ok" ]; then
+  exit 0
+else
+  exit 1
+fi
